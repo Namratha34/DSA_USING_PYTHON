@@ -1,0 +1,84 @@
+# Data Structures and Algorithms Using Python
+
+## Day 01 – Introduction to Time and Space Complexity
+
+### 1. What is Time Complexity?
+
+Time Complexity is a measure of how the execution time of an algorithm grows as the input size increases.
+
+It helps us understand how efficient an algorithm is, without depending on the machine's speed or hardware.
+
+**Example:**
+- If an algorithm takes more steps as the input size increases, its time complexity describes that growth.
+- We generally express time complexity using Big O notation.
+
+### 2. Why Do Interviewers Ask About Time and Space Complexity?
+
+Interviewers ask about time and space complexity to evaluate:
+
+1. **Algorithm Efficiency:** How efficiently can we solve a problem?
+2. **Performance:** How does the solution behave when the input size increases?
+3. **Optimization:** Can we improve the solution?
+4. **Problem-Solving Skills:** Do we understand the trade-offs between time and memory?
+5. **Scalability:** Can our solution handle large amounts of data?
+
+### 3. Different Types of Time Complexity
+
+Big O notation describes how an algorithm's resource requirements grow with input size.
+
+| Complexity | Name | Explanation |
+|---|---|---|
+| O(1) | Constant | Execution time remains constant regardless of input size. |
+| O(log n) | Logarithmic | Execution time grows logarithmically as input size increases. |
+| O(n) | Linear | Execution time grows proportionally to input size. |
+| O(n log n) | Linearithmic | Common in efficient sorting algorithms. |
+| O(n²) | Quadratic | Execution time grows approximately with the square of input size. |
+| O(n³) | Cubic | Execution time grows approximately with the cube of input size. |
+| O(2ⁿ) | Exponential | Execution time doubles with each additional input element. |
+| O(n!) | Factorial | Execution time grows factorially with input size. |
+
+### 4. Different Types of Space Complexity
+
+Space Complexity measures how much additional memory an algorithm requires as the input size increases.
+
+Common types include:
+
+| Complexity | Explanation |
+|---|---|
+| O(1) | Constant additional space. |
+| O(log n) | Logarithmic additional space. |
+| O(n) | Linear additional space. |
+| O(n²) | Quadratic additional space. |
+
+**Important:** Space complexity can include auxiliary space (extra memory used by the algorithm) and, depending on the convention, input storage.
+
+### 5. Rules to Calculate Time Complexity
+
+**Rule 1: Ignore Constants**
+
+O(2n) becomes O(n).
+
+**Rule 2: Ignore Lower-Order Terms**
+
+O(n² + n + 1) becomes O(n²).
+
+**Rule 3: Sequential Statements**
+
+Add the complexities and retain the dominant term.
+
+Example: O(n) + O(n²) = O(n²).
+
+**Rule 4: Nested Loops**
+
+Multiply the complexities of nested loops when their iteration counts are independent.
+
+Example: Two nested loops, each running n times, give O(n × n) = O(n²).
+
+**Rule 5: Single Loop**
+
+A loop running n times generally has O(n) time complexity.
+
+**Rule 6: Consecutive Loops**
+
+Two separate loops running n times each give O(n + n) = O(n).
+

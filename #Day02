@@ -1,0 +1,94 @@
+# Day 02 – Time Limit Exceeded & Time Complexity of Python Operations
+
+## 1. Time Limit Exceeded (TLE) Error
+
+### What is Time Limit Exceeded?
+
+Time Limit Exceeded (TLE) is an error that occurs when an algorithm takes more time to execute than the maximum time allowed by the platform.
+
+In coding platforms, every problem may have a time limit, such as 1 second, 2 seconds, etc.
+
+If our program exceeds the given time limit, the platform displays a **Time Limit Exceeded (TLE)** error.
+
+### Understanding the 1-Second Rule
+
+As a rough estimation:
+
+- 1 second ≈ 10⁸ (100 million) simple operations.
+
+This is only an approximate guideline. Actual execution time depends on the programming language, hardware, operation type, and platform.
+
+### What Are Constraints?
+
+Constraints define the limits of the input given in a problem.
+
+For example:
+
+```text
+1 <= n <= 100000
+```
+
+This means the value of n can range from 1 to 100000.
+
+Constraints help us determine which algorithm and time complexity are suitable for solving a problem.
+
+### Important Points
+
+- Always check the time limit before solving a problem.
+- Understand the input constraints.
+- Choose an efficient algorithm.
+- An algorithm that works for small inputs may fail for large inputs.
+- Higher time complexity can lead to TLE for large inputs.
+
+---
+
+## 2. Time Complexity of Common Python Operations
+
+Python operations have different time complexities. Understanding them helps us write efficient programs.
+
+### A. List Operations
+
+| Operation | Time Complexity |
+|---|---|
+| Copy (`list.copy()`) | O(n) |
+| Append (`list.append(x)`) | O(1) amortized |
+| Pop last element (`list.pop()`) | O(1) |
+| Pop intermediate element (`list.pop(i)`) | O(n) |
+| Insert (`list.insert(i, x)`) | O(n) |
+| Get item (`list[i]`) | O(1) |
+| Set item (`list[i] = x`) | O(1) |
+| Delete item (`del list[i]`) | O(n) |
+| Iteration | O(n) |
+| Get slice (`list[a:b]`) | O(k) |
+| Delete slice (`del list[a:b]`) | O(n) |
+| Set slice (`list[a:b] = values`) | O(n + k) |
+| Extend (`list.extend(iterable)`) | O(k) amortized |
+| Sort (`list.sort()`) | O(n log n) |
+| Multiply (`list * k`) | O(n × k) |
+| Membership (`x in list`) | O(n) |
+| Length (`len(list)`) | O(1) |
+
+Here:
+- n = number of elements in the list.
+- k = number of elements in the slice, iterable, or repetitions, depending on the operation.
+
+### B. Set Operations
+
+| Operation | Time Complexity |
+|---|---|
+| Membership (`x in set`) | O(1) average |
+
+Note: Set membership can take O(n) in the worst case.
+
+### C. Dictionary Operations
+
+| Operation | Time Complexity |
+|---|---|
+| Membership (`key in dict`) | O(1) average |
+| Copy (`dict.copy()`) | O(n) |
+| Get item (`dict[key]`) | O(1) average |
+| Set item (`dict[key] = value`) | O(1) average |
+| Delete item (`del dict[key]`) | O(1) average |
+| Iteration | O(n) |
+
+Note: Dictionary operations can take O(n) in the worst case..

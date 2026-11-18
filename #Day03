@@ -1,0 +1,153 @@
+# Day 03 – Digit Extraction in Python
+
+## 1. What is Digit Extraction?
+
+Digit Extraction is a technique used to extract individual digits from a given number using mathematical operations.
+
+It is commonly used in number-based programming problems.
+
+Two important operators used for digit extraction are:
+
+- **Modulo (%)** – Extracts the last digit of a number.
+- **Floor Division (//)** – Removes the last digit of a number.
+
+### Example
+
+Consider the number:
+
+```python
+num = 12345
+```
+
+**Step 1: Extract the last digit**
+
+```python
+digit = num % 10
+print(digit)
+```
+
+Output:
+```text
+5
+```
+
+**Step 2: Remove the last digit**
+
+```python
+num = num // 10
+print(num)
+```
+
+Output:
+```text
+1234
+```
+
+By repeating these operations, we can extract all the digits of a number.
+
+---
+
+## 2. Problem 1 – Count the Number of Digits
+
+### Problem Statement
+
+Given an integer, count the total number of digits present in it.
+
+**Example:**
+
+Input:
+```text
+12345
+```
+
+Output:
+```text
+5
+```
+
+### Approach 1: Using a While Loop
+
+**Logic:**
+
+1. Take an integer as input.
+2. Initialize a counter variable with 0.
+3. Use a while loop until the number becomes 0.
+4. Divide the number by 10 using floor division (`//`).
+5. Increment the counter in every iteration.
+6. Print the final count.
+
+**Python Code:**
+
+```python
+num = int(input("Enter a number: "))
+
+count = 0
+
+while num > 0:
+    num = num // 10
+    count += 1
+
+print("Number of digits:", count)
+```
+
+**Output:**
+
+```text
+Enter a number: 12345
+Number of digits: 5
+```
+
+### Approach 2: Using the log10() Technique
+
+We can also count the digits of a positive integer using the mathematical logarithm technique.
+
+**Formula:**
+
+\[
+\text{Number of digits} = \lfloor \log_{10}(n) \rfloor + 1
+\]
+
+**Python Code:**
+
+```python
+import math
+
+num = 12345
+
+count = math.floor(math.log10(num)) + 1
+
+print("Number of digits:", count)
+```
+
+**Output:**
+
+```text
+Number of digits: 5
+```
+
+**Explanation:**
+
+For the number 12345:
+
+\[
+\lfloor \log_{10}(12345) \rfloor + 1
+\]
+
+\[
+= 4 + 1 = 5
+\]
+
+Therefore, the number contains 5 digits.
+
+**Note:** The log10 technique works for positive integers. Handle zero and negative numbers separately.
+
+---
+
+## 3. Time Complexity
+
+| Approach | Time Complexity | Space Complexity |
+|---|---|---|
+| While Loop | O(log₁₀ n) | O(1) |
+| log10() Technique | O(1) | O(1) |
+
+Here, n represents the input number. The logarithmic complexity comes from repeatedly removing one decimal digit.
